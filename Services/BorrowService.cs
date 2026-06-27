@@ -1,0 +1,80 @@
+﻿using Library.Contract;
+using Library.DTOs.BorrowTransactionDTOs;
+using Library.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace Library.Services
+{
+    public class BorrowService : IBorrowService
+    {
+        private readonly LibraryContext _dbcontext;
+        private readonly IActivityLogService _activityLogService;
+
+        public BorrowService( LibraryContext context,IActivityLogService activityLogService)
+        {
+            _dbcontext = context;
+            _activityLogService = activityLogService;
+        }
+        public async Task BorrowBookAsync(BorrowDTO dto, string userId)
+        {
+            var book = await _dbcontext.Books
+                .FirstOrDefaultAsync(x => x.Id == dto.BookId && !x.IsDeleted);
+
+            if (book == null)
+                throw new Exception("Book not found");
+
+            if (!book.IsAvailable)
+                throw new Exception("Book is already borrowed");
+
+            var member = await _dbcontext.Members
+                .FirstOrDefaultAsync(x => x.Id == dto.MemberId && !x.IsDeleted);
+
+            if (member == null)
+                throw new Exception("Member not found");
+
+            var transaction = new BorrowTransaction
+            {
+                BookId = dto.BookId,
+                MemberId = dto.MemberId,
+                BorrowDate = DateTimeOffset.UtcNow,
+                DueDate = dto.DueDate
+            };
+
+            book.IsAvailable = false;
+
+            _dbcontext.BorrowTransactions.Add(transaction);
+
+            await _dbcontext.SaveChangesAsync();
+
+            await _activityLogService.LogAsync(
+                userId,
+                "Borrow",
+                nameof(BorrowTransaction),
+                transaction.Id);
+        }
+        public async Task ReturnBookAsync(int transactionId, string userId)
+        {
+            var transaction = await _dbcontext.BorrowTransactions
+                .Include(x => x.Book)
+                .FirstOrDefaultAsync(x => x.Id == transactionId);
+
+            if (transaction == null)
+                throw new Exception("Transaction not found");
+
+            if (transaction.ReturnDate != null)
+                throw new Exception("Book already returned");
+
+            transaction.ReturnDate = DateTimeOffset.UtcNow;
+
+            transaction.Book.IsAvailable = true;
+
+            await _dbcontext.SaveChangesAsync();
+
+            await _activityLogService.LogAsync(
+                userId,
+                "Return",
+                nameof(BorrowTransaction),
+                transaction.Id);
+        }
+    }
+}
