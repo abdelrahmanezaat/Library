@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Library.DTOs;
 using Library.DTOs.BookDTOs;
+using Library.DTOs.BorrowTransactionDTOs;
 using Library.DTOs.CategoryDTOs;
 using Library.DTOs.Member;
 using Library.Models;
@@ -15,6 +16,10 @@ namespace Library.Mappings
             CreateMap<Member, GetMemberDTO>();
             CreateMap<CreateMemberDTO, Member>();
             CreateMap<UpdateMemberDTO, Member>();
+              // Borrowing
+            CreateMap<BorrowTransaction, GetBorrowDTO>();
+            CreateMap<BorrowDTO, BorrowTransaction>();
+       
 
             // Book
 

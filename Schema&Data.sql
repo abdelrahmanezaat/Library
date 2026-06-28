@@ -1,12 +1,12 @@
 USE [master]
 GO
-/****** Object:  Database [LibraryDb]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Database [LibraryDb]    Script Date: 6/28/2026 10:31:08 AM ******/
 CREATE DATABASE [LibraryDb]
  CONTAINMENT = NONE
  ON  PRIMARY 
-( NAME = N'LibraryDb', FILENAME = N'C:\Users\user\LibraryDb.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+( NAME = N'LibraryDb', FILENAME = N'C:\Users\Administrator\LibraryDb.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
  LOG ON 
-( NAME = N'LibraryDb_log', FILENAME = N'C:\Users\user\LibraryDb_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+( NAME = N'LibraryDb_log', FILENAME = N'C:\Users\Administrator\LibraryDb_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
  WITH CATALOG_COLLATION = DATABASE_DEFAULT
 GO
 ALTER DATABASE [LibraryDb] SET COMPATIBILITY_LEVEL = 150
@@ -80,7 +80,7 @@ ALTER DATABASE [LibraryDb] SET QUERY_STORE = OFF
 GO
 USE [LibraryDb]
 GO
-/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -94,7 +94,7 @@ CREATE TABLE [dbo].[__EFMigrationsHistory](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ActivityLogs]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[ActivityLogs]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[ActivityLogs](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetRoleClaims]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[AspNetRoleClaims]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -128,7 +128,7 @@ CREATE TABLE [dbo].[AspNetRoleClaims](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetRoles]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[AspNetRoles]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -144,7 +144,7 @@ CREATE TABLE [dbo].[AspNetRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetUserClaims]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[AspNetUserClaims]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -160,7 +160,7 @@ CREATE TABLE [dbo].[AspNetUserClaims](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetUserLogins]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[AspNetUserLogins]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -177,7 +177,7 @@ CREATE TABLE [dbo].[AspNetUserLogins](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetUserRoles]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[AspNetUserRoles]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -192,7 +192,7 @@ CREATE TABLE [dbo].[AspNetUserRoles](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetUsers]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[AspNetUsers]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -220,7 +220,7 @@ CREATE TABLE [dbo].[AspNetUsers](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AspNetUserTokens]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[AspNetUserTokens]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -238,7 +238,7 @@ CREATE TABLE [dbo].[AspNetUserTokens](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Authors]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[Authors]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -257,7 +257,7 @@ CREATE TABLE [dbo].[Authors](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[BookAuthors]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[BookAuthors]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -272,7 +272,7 @@ CREATE TABLE [dbo].[BookAuthors](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Books]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[Books]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -298,7 +298,7 @@ CREATE TABLE [dbo].[Books](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[BorrowTransactions]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[BorrowTransactions]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -321,7 +321,7 @@ CREATE TABLE [dbo].[BorrowTransactions](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Categories]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[Categories]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -340,7 +340,7 @@ CREATE TABLE [dbo].[Categories](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Members]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[Members]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -362,7 +362,7 @@ CREATE TABLE [dbo].[Members](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Publishers]    Script Date: 6/28/2026 2:18:25 AM ******/
+/****** Object:  Table [dbo].[Publishers]    Script Date: 6/28/2026 10:31:08 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -430,19 +430,15 @@ INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId],
 GO
 INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (23, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Create', N'Book', 2, CAST(N'2026-06-27T22:05:34.6386169+00:00' AS DateTimeOffset))
 GO
-INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (24, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Borrow', N'BorrowTransaction', 1, CAST(N'2026-06-27T22:08:16.8185457+00:00' AS DateTimeOffset))
-GO
-INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (25, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Return', N'BorrowTransaction', 1, CAST(N'2026-06-27T22:08:31.9367280+00:00' AS DateTimeOffset))
-GO
-INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (26, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Borrow', N'BorrowTransaction', 2, CAST(N'2026-06-27T22:09:01.2170516+00:00' AS DateTimeOffset))
-GO
-INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (27, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Return', N'BorrowTransaction', 2, CAST(N'2026-06-27T22:09:29.0068761+00:00' AS DateTimeOffset))
-GO
-INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (28, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Borrow', N'BorrowTransaction', 3, CAST(N'2026-06-27T22:09:32.9527993+00:00' AS DateTimeOffset))
-GO
 INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (29, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Update', N'Category', 1, CAST(N'2026-06-27T23:07:56.3882859+00:00' AS DateTimeOffset))
 GO
 INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (30, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Update', N'Category', 1, CAST(N'2026-06-27T23:09:01.4824314+00:00' AS DateTimeOffset))
+GO
+INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (31, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Borrow', N'BorrowTransaction', 1, CAST(N'2026-06-28T08:02:41.4624803+00:00' AS DateTimeOffset))
+GO
+INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (32, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Borrow', N'BorrowTransaction', 2, CAST(N'2026-06-28T08:03:18.3539747+00:00' AS DateTimeOffset))
+GO
+INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (33, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Return', N'BorrowTransaction', 1, CAST(N'2026-06-28T08:14:16.1805798+00:00' AS DateTimeOffset))
 GO
 SET IDENTITY_INSERT [dbo].[ActivityLogs] OFF
 GO
@@ -482,7 +478,7 @@ INSERT [dbo].[BookAuthors] ([BookId], [AuthorId]) VALUES (2, 3)
 GO
 SET IDENTITY_INSERT [dbo].[Books] ON 
 GO
-INSERT [dbo].[Books] ([Id], [Title], [ISBN], [PublicationYear], [Language], [Summary], [CoverImageUrl], [IsAvailable], [PublisherId], [CategoryId], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (1, N'Clean Code', N'9780132350884', 2008, N'En', N'A practical guide to writing clean, maintainable, and readable code.', N'Uploads/786ad967-2c12-419a-ab6f-06b6ed536c90.png', 0, 1, 1, CAST(N'2026-06-27T21:54:46.1834599+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:03:07.6617920+00:00' AS DateTimeOffset), NULL, 0)
+INSERT [dbo].[Books] ([Id], [Title], [ISBN], [PublicationYear], [Language], [Summary], [CoverImageUrl], [IsAvailable], [PublisherId], [CategoryId], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (1, N'Clean Code', N'9780132350884', 2008, N'En', N'A practical guide to writing clean, maintainable, and readable code.', N'Uploads/786ad967-2c12-419a-ab6f-06b6ed536c90.png', 1, 1, 1, CAST(N'2026-06-27T21:54:46.1834599+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:03:07.6617920+00:00' AS DateTimeOffset), NULL, 0)
 GO
 INSERT [dbo].[Books] ([Id], [Title], [ISBN], [PublicationYear], [Language], [Summary], [CoverImageUrl], [IsAvailable], [PublisherId], [CategoryId], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (2, N'The Pragmatic Programmer', N'9780201616224', 2008, N'En', N'Best practices and techniques for becoming a better software developer.', N'Uploads/c1181cfe-fb91-43f2-9e48-271b7b98f8b0.png', 0, 2, 1, CAST(N'2026-06-27T22:05:34.6167935+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:05:34.6169537+00:00' AS DateTimeOffset), NULL, 0)
 GO
@@ -490,11 +486,9 @@ SET IDENTITY_INSERT [dbo].[Books] OFF
 GO
 SET IDENTITY_INSERT [dbo].[BorrowTransactions] ON 
 GO
-INSERT [dbo].[BorrowTransactions] ([Id], [BookId], [IsReturned], [MemberId], [BorrowDate], [DueDate], [ReturnDate], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (1, 1, 0, 1, CAST(N'2026-06-27T22:08:16.7494037+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:07:55.7120000+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:08:31.9257004+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:08:16.7492597+00:00' AS DateTimeOffset), NULL, NULL, 0)
+INSERT [dbo].[BorrowTransactions] ([Id], [BookId], [IsReturned], [MemberId], [BorrowDate], [DueDate], [ReturnDate], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (1, 1, 1, 1, CAST(N'2026-06-28T08:02:40.5639911+00:00' AS DateTimeOffset), CAST(N'2026-06-28T08:02:30.6010000+00:00' AS DateTimeOffset), CAST(N'2026-06-28T08:14:15.7388202+00:00' AS DateTimeOffset), CAST(N'2026-06-28T08:02:40.5641198+00:00' AS DateTimeOffset), NULL, NULL, 0)
 GO
-INSERT [dbo].[BorrowTransactions] ([Id], [BookId], [IsReturned], [MemberId], [BorrowDate], [DueDate], [ReturnDate], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (2, 1, 0, 1, CAST(N'2026-06-27T22:09:01.2073669+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:07:55.7120000+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:09:28.9925527+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:09:01.2073663+00:00' AS DateTimeOffset), NULL, NULL, 0)
-GO
-INSERT [dbo].[BorrowTransactions] ([Id], [BookId], [IsReturned], [MemberId], [BorrowDate], [DueDate], [ReturnDate], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (3, 1, 0, 2, CAST(N'2026-06-27T22:09:32.9337404+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:07:55.7120000+00:00' AS DateTimeOffset), NULL, CAST(N'2026-06-27T22:09:32.9337395+00:00' AS DateTimeOffset), NULL, NULL, 0)
+INSERT [dbo].[BorrowTransactions] ([Id], [BookId], [IsReturned], [MemberId], [BorrowDate], [DueDate], [ReturnDate], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (2, 2, 0, 1, CAST(N'2026-06-28T08:03:18.3156245+00:00' AS DateTimeOffset), CAST(N'2026-06-28T08:02:30.6010000+00:00' AS DateTimeOffset), NULL, CAST(N'2026-06-28T08:03:18.3156248+00:00' AS DateTimeOffset), NULL, NULL, 0)
 GO
 SET IDENTITY_INSERT [dbo].[BorrowTransactions] OFF
 GO
@@ -530,7 +524,7 @@ SET IDENTITY_INSERT [dbo].[Publishers] OFF
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_AspNetRoleClaims_RoleId]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [IX_AspNetRoleClaims_RoleId]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE NONCLUSTERED INDEX [IX_AspNetRoleClaims_RoleId] ON [dbo].[AspNetRoleClaims]
 (
 	[RoleId] ASC
@@ -538,7 +532,7 @@ CREATE NONCLUSTERED INDEX [IX_AspNetRoleClaims_RoleId] ON [dbo].[AspNetRoleClaim
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [RoleNameIndex]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [RoleNameIndex]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE UNIQUE NONCLUSTERED INDEX [RoleNameIndex] ON [dbo].[AspNetRoles]
 (
 	[NormalizedName] ASC
@@ -548,7 +542,7 @@ WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNOR
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_AspNetUserClaims_UserId]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [IX_AspNetUserClaims_UserId]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE NONCLUSTERED INDEX [IX_AspNetUserClaims_UserId] ON [dbo].[AspNetUserClaims]
 (
 	[UserId] ASC
@@ -556,7 +550,7 @@ CREATE NONCLUSTERED INDEX [IX_AspNetUserClaims_UserId] ON [dbo].[AspNetUserClaim
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_AspNetUserLogins_UserId]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [IX_AspNetUserLogins_UserId]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE NONCLUSTERED INDEX [IX_AspNetUserLogins_UserId] ON [dbo].[AspNetUserLogins]
 (
 	[UserId] ASC
@@ -564,7 +558,7 @@ CREATE NONCLUSTERED INDEX [IX_AspNetUserLogins_UserId] ON [dbo].[AspNetUserLogin
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_AspNetUserRoles_RoleId]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [IX_AspNetUserRoles_RoleId]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE NONCLUSTERED INDEX [IX_AspNetUserRoles_RoleId] ON [dbo].[AspNetUserRoles]
 (
 	[RoleId] ASC
@@ -572,7 +566,7 @@ CREATE NONCLUSTERED INDEX [IX_AspNetUserRoles_RoleId] ON [dbo].[AspNetUserRoles]
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [EmailIndex]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [EmailIndex]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE NONCLUSTERED INDEX [EmailIndex] ON [dbo].[AspNetUsers]
 (
 	[NormalizedEmail] ASC
@@ -580,7 +574,7 @@ CREATE NONCLUSTERED INDEX [EmailIndex] ON [dbo].[AspNetUsers]
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UserNameIndex]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [UserNameIndex]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE UNIQUE NONCLUSTERED INDEX [UserNameIndex] ON [dbo].[AspNetUsers]
 (
 	[NormalizedUserName] ASC
@@ -588,37 +582,37 @@ CREATE UNIQUE NONCLUSTERED INDEX [UserNameIndex] ON [dbo].[AspNetUsers]
 WHERE ([NormalizedUserName] IS NOT NULL)
 WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_BookAuthors_AuthorId]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [IX_BookAuthors_AuthorId]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE NONCLUSTERED INDEX [IX_BookAuthors_AuthorId] ON [dbo].[BookAuthors]
 (
 	[AuthorId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Books_CategoryId]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [IX_Books_CategoryId]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE NONCLUSTERED INDEX [IX_Books_CategoryId] ON [dbo].[Books]
 (
 	[CategoryId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Books_PublisherId]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [IX_Books_PublisherId]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE NONCLUSTERED INDEX [IX_Books_PublisherId] ON [dbo].[Books]
 (
 	[PublisherId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_BorrowTransactions_BookId]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [IX_BorrowTransactions_BookId]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE NONCLUSTERED INDEX [IX_BorrowTransactions_BookId] ON [dbo].[BorrowTransactions]
 (
 	[BookId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_BorrowTransactions_MemberId]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [IX_BorrowTransactions_MemberId]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE NONCLUSTERED INDEX [IX_BorrowTransactions_MemberId] ON [dbo].[BorrowTransactions]
 (
 	[MemberId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Categories_ParentId]    Script Date: 6/28/2026 2:18:26 AM ******/
+/****** Object:  Index [IX_Categories_ParentId]    Script Date: 6/28/2026 10:31:09 AM ******/
 CREATE NONCLUSTERED INDEX [IX_Categories_ParentId] ON [dbo].[Categories]
 (
 	[ParentId] ASC

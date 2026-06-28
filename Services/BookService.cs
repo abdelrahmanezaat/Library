@@ -181,6 +181,7 @@ namespace Library.Services
                 return false;
 
             _mapper.Map(dto, book);
+            
 
             if (dto.CoverImage != null)
             {

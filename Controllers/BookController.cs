@@ -37,7 +37,7 @@ namespace Library.Controllers
 
             return Ok(category);
         }
-        [HttpGet("category/{categoryId}")]
+        [HttpGet("{categoryId}")]
         public async Task<IActionResult> GetByCategory(int categoryId)
         {
             var books = await _BookService.GetByCategoryAsync(categoryId);
@@ -48,7 +48,7 @@ namespace Library.Controllers
             return Ok(books);
         }
 
-        [HttpGet("author/{authorId}")]
+        [HttpGet("{authorId}")]
         public async Task<IActionResult> GetByAuthor(int authorId)
         {
             var books = await _BookService.GetByAuthorAsync(authorId);
@@ -59,7 +59,7 @@ namespace Library.Controllers
             return Ok(books);
         }
 
-        [HttpGet("status/{isAvailable}")]
+        [HttpGet("{isAvailable}")]
         public async Task<IActionResult> GetByStatus(bool isAvailable)
         {
             var books = await _BookService.GetByStatusAsync(isAvailable);

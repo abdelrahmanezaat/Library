@@ -44,7 +44,7 @@ SET IDENTITY_INSERT [dbo].[Publishers] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Books] ON 
 GO
-INSERT [dbo].[Books] ([Id], [Title], [ISBN], [PublicationYear], [Language], [Summary], [CoverImageUrl], [IsAvailable], [PublisherId], [CategoryId], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (1, N'Clean Code', N'9780132350884', 2008, N'En', N'A practical guide to writing clean, maintainable, and readable code.', N'Uploads/786ad967-2c12-419a-ab6f-06b6ed536c90.png', 0, 1, 1, CAST(N'2026-06-27T21:54:46.1834599+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:03:07.6617920+00:00' AS DateTimeOffset), NULL, 0)
+INSERT [dbo].[Books] ([Id], [Title], [ISBN], [PublicationYear], [Language], [Summary], [CoverImageUrl], [IsAvailable], [PublisherId], [CategoryId], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (1, N'Clean Code', N'9780132350884', 2008, N'En', N'A practical guide to writing clean, maintainable, and readable code.', N'Uploads/786ad967-2c12-419a-ab6f-06b6ed536c90.png', 1, 1, 1, CAST(N'2026-06-27T21:54:46.1834599+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:03:07.6617920+00:00' AS DateTimeOffset), NULL, 0)
 GO
 INSERT [dbo].[Books] ([Id], [Title], [ISBN], [PublicationYear], [Language], [Summary], [CoverImageUrl], [IsAvailable], [PublisherId], [CategoryId], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (2, N'The Pragmatic Programmer', N'9780201616224', 2008, N'En', N'Best practices and techniques for becoming a better software developer.', N'Uploads/c1181cfe-fb91-43f2-9e48-271b7b98f8b0.png', 0, 2, 1, CAST(N'2026-06-27T22:05:34.6167935+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:05:34.6169537+00:00' AS DateTimeOffset), NULL, 0)
 GO
@@ -74,11 +74,9 @@ SET IDENTITY_INSERT [dbo].[Members] OFF
 GO
 SET IDENTITY_INSERT [dbo].[BorrowTransactions] ON 
 GO
-INSERT [dbo].[BorrowTransactions] ([Id], [BookId], [IsReturned], [MemberId], [BorrowDate], [DueDate], [ReturnDate], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (1, 1, 0, 1, CAST(N'2026-06-27T22:08:16.7494037+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:07:55.7120000+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:08:31.9257004+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:08:16.7492597+00:00' AS DateTimeOffset), NULL, NULL, 0)
+INSERT [dbo].[BorrowTransactions] ([Id], [BookId], [IsReturned], [MemberId], [BorrowDate], [DueDate], [ReturnDate], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (1, 1, 1, 1, CAST(N'2026-06-28T08:02:40.5639911+00:00' AS DateTimeOffset), CAST(N'2026-06-28T08:02:30.6010000+00:00' AS DateTimeOffset), CAST(N'2026-06-28T08:14:15.7388202+00:00' AS DateTimeOffset), CAST(N'2026-06-28T08:02:40.5641198+00:00' AS DateTimeOffset), NULL, NULL, 0)
 GO
-INSERT [dbo].[BorrowTransactions] ([Id], [BookId], [IsReturned], [MemberId], [BorrowDate], [DueDate], [ReturnDate], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (2, 1, 0, 1, CAST(N'2026-06-27T22:09:01.2073669+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:07:55.7120000+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:09:28.9925527+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:09:01.2073663+00:00' AS DateTimeOffset), NULL, NULL, 0)
-GO
-INSERT [dbo].[BorrowTransactions] ([Id], [BookId], [IsReturned], [MemberId], [BorrowDate], [DueDate], [ReturnDate], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (3, 1, 0, 2, CAST(N'2026-06-27T22:09:32.9337404+00:00' AS DateTimeOffset), CAST(N'2026-06-27T22:07:55.7120000+00:00' AS DateTimeOffset), NULL, CAST(N'2026-06-27T22:09:32.9337395+00:00' AS DateTimeOffset), NULL, NULL, 0)
+INSERT [dbo].[BorrowTransactions] ([Id], [BookId], [IsReturned], [MemberId], [BorrowDate], [DueDate], [ReturnDate], [CreatedAt], [UpdateAt], [DeleteAt], [IsDeleted]) VALUES (2, 2, 0, 1, CAST(N'2026-06-28T08:03:18.3156245+00:00' AS DateTimeOffset), CAST(N'2026-06-28T08:02:30.6010000+00:00' AS DateTimeOffset), NULL, CAST(N'2026-06-28T08:03:18.3156248+00:00' AS DateTimeOffset), NULL, NULL, 0)
 GO
 SET IDENTITY_INSERT [dbo].[BorrowTransactions] OFF
 GO
@@ -132,19 +130,15 @@ INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId],
 GO
 INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (23, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Create', N'Book', 2, CAST(N'2026-06-27T22:05:34.6386169+00:00' AS DateTimeOffset))
 GO
-INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (24, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Borrow', N'BorrowTransaction', 1, CAST(N'2026-06-27T22:08:16.8185457+00:00' AS DateTimeOffset))
-GO
-INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (25, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Return', N'BorrowTransaction', 1, CAST(N'2026-06-27T22:08:31.9367280+00:00' AS DateTimeOffset))
-GO
-INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (26, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Borrow', N'BorrowTransaction', 2, CAST(N'2026-06-27T22:09:01.2170516+00:00' AS DateTimeOffset))
-GO
-INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (27, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Return', N'BorrowTransaction', 2, CAST(N'2026-06-27T22:09:29.0068761+00:00' AS DateTimeOffset))
-GO
-INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (28, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Borrow', N'BorrowTransaction', 3, CAST(N'2026-06-27T22:09:32.9527993+00:00' AS DateTimeOffset))
-GO
 INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (29, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Update', N'Category', 1, CAST(N'2026-06-27T23:07:56.3882859+00:00' AS DateTimeOffset))
 GO
 INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (30, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Update', N'Category', 1, CAST(N'2026-06-27T23:09:01.4824314+00:00' AS DateTimeOffset))
+GO
+INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (31, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Borrow', N'BorrowTransaction', 1, CAST(N'2026-06-28T08:02:41.4624803+00:00' AS DateTimeOffset))
+GO
+INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (32, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Borrow', N'BorrowTransaction', 2, CAST(N'2026-06-28T08:03:18.3539747+00:00' AS DateTimeOffset))
+GO
+INSERT [dbo].[ActivityLogs] ([Id], [UserId], [Action], [EntityName], [EntityId], [CreatedAt]) VALUES (33, N'1c05cf9a-5410-4039-8c47-05869cb5e755', N'Return', N'BorrowTransaction', 1, CAST(N'2026-06-28T08:14:16.1805798+00:00' AS DateTimeOffset))
 GO
 SET IDENTITY_INSERT [dbo].[ActivityLogs] OFF
 GO
